@@ -63,9 +63,55 @@ function main() {
   // renderer.render(scene, camera);
   /** 创建单个 cube, end **/
 
+  // 一个canvas的内部尺寸，它的分辨率，通常被叫做绘图缓冲区(drawingbuffer)尺寸。
+  // 这个函数检查渲染器的 canvas 尺寸，是否和canvas 的显示尺寸不一样，如果不一样就设置更新
+  // 如果一致，就最后不要设置相同的大小
+  function resizeRendererToDisplaySize(renderer) {
+    const canvas = renderer.domElement;
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    const needResize = canvas.width !== width || canvas.height !== height;
+    if (needResize) {
+      // 默认会设置 canvas 的 css 尺寸，这是我们不想要的，所以需要在最后一个参数使用 false
+      renderer.setSize(width, height, false);
+    }
+    return needResize;
+  }
+
+  /**
+   * 如果一定想要使用设备的分辨率的话，用下面这种直接设置宽高的方法更好
+   * 因为有很多种情况下我们需要知道canvas的绘图缓冲区的确切尺寸
+   * 使用下面这个方法，在 HD-DPI 显示器上边角会更清晰
+   */
+  // function resizeRendererToDisplaySize(renderer) {
+  //   const canvas = renderer.domElement;
+  //   // 获取设备的 pixel ratio
+  //   const pixelRatio = window.devicePixelRatio;
+  //   // 然后直接相乘获取宽高，再设置
+  //   const width = (canvas.clientWidth * pixelRatio) | 0;
+  //   const height = (canvas.clientHeight * pixelRatio) | 0;
+  //   const needResize = canvas.width !== width || canvas.height !== height;
+  //   if (needResize) {
+  //     renderer.setSize(width, height, false);
+  //   }
+  //   return needResize;
+  // }
+
   // 为了让它动起来我们需要用到一个渲染循环函数 requestAnimationFrame
   function render(time) {
     time *= 0.001; // 将时间单位变为秒
+
+    // 仅当canvas尺寸发生变化时去更新 camera 的宽高比
+    if (resizeRendererToDisplaySize(renderer)) {
+      // 当 canvas 没有固定 width/height，而是设置为响应式的时候
+      // 如果不改变的话，cube 会被拉伸并出现不清晰的锯齿
+      // 所以这里设置用 clientWidth/clientHeight 来设置 aspect 来解决
+      const canvas = renderer.domElement;
+      camera.aspect = canvas.clientWidth / canvas.clientHeight;
+      camera.updateProjectionMatrix();
+      // 以上代码作用后，立方体不会被拉伸，保持正确的比例
+    }
+    // 使用以上的 block 之后，渲染的分辨率是和 canvas 的显示尺寸一样的，不会出现不清晰的锯齿了
 
     // cube.rotation.x = time;
     // cube.rotation.y = time;
