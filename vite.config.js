@@ -9,6 +9,7 @@ export default defineConfig({
         fundamentals: resolve(__dirname, 'examples/01-fundamental.html'),
         primitives: resolve(__dirname, 'examples/02-primitives.html'),
         scenegraph: resolve(__dirname, 'examples/03-scenegraph.html'),
+        tank: resolve(__dirname, 'examples/tank.html'),
       },
     },
   },
