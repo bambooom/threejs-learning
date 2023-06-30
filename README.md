@@ -8,7 +8,11 @@
 >现在并不明显是否右边有 5000 个三角形的比中间只有 480 个三角形的好更多。 如果你只是绘制少量球体，比如一个地球地图的球体，那么单个 10000 个三角形的球体就是个不错的选择。 但如果你要画 1000 个球体，那么 1000 个球体 x 10000 个三角形就是一千万个三角形。 想要动画流畅，你需要浏览器每秒绘制 60 帧，那么上面的场景就需要每秒绘制 6 亿个三角形。那是巨大的运算量。
 > 细分的越少，运行的越流畅，使用的内存也会更少。 你需要根据你的具体情况选择合适的方案。
 
-
+> 纹理往往是 three.js 应用中使用内存最多的部分。重要的是要明白，一般来说，纹理会占用 `宽度 * 高度 * 4 * 1.33` 字节的内存。
+> Mips 是纹理的副本，每一个都是前一个 mip 的一半宽和一半高，其中的像素已经被混合以制作下一个较小的 mip。Mips一直被创建，直到我们得到1x1像素的Mip。
+> 当纹理绘制的尺寸大于其原始尺寸时，你可以将 texture.magFilter 属性设置为 THREE.NearestFilter 或 THREE.LinearFilter 。NearestFilter 意味着只需从原始纹理中选取最接近的一个像素。对于低分辨率的纹理，这给你一个非常像素化的外观，就像Minecraft。
+> LinearFilter 是指从纹理中选择离我们应该选择颜色的地方最近的4个像素，并根据实际点与4个像素的距离，以适当的比例进行混合。
+> 在绘制的纹理小于其原始尺寸时设置过滤器，你可以将 texture.minFilter 属性设置为6个值
 
 ## Logs
 
@@ -17,3 +21,4 @@
 - [x] [Primitives 图元](https://threejs.org/manual/#zh%252Fprimitives): 6.27 ✅
 - [x] [Scenegraph 场景图](https://threejs.org/manual/#zh/scenegraph): 6.29 ✅
 - [x] [Materials 材质](https://threejs.org/manual/#zh%252Fmaterials): 6.29 ✅
+- [x] [Texture 纹理](https://threejs.org/manual/#zh%252Ftextures)

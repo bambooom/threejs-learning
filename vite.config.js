@@ -10,6 +10,7 @@ export default defineConfig({
         primitives: resolve(__dirname, 'examples/02-primitives.html'),
         scenegraph: resolve(__dirname, 'examples/03-scenegraph.html'),
         tank: resolve(__dirname, 'examples/tank.html'),
+        texture: resolve(__dirname, 'examples/04-texture.html'),
       },
     },
   },
