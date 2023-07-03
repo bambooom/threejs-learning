@@ -21,4 +21,5 @@
 - [x] [Primitives 图元](https://threejs.org/manual/#zh%252Fprimitives): 6.27 ✅
 - [x] [Scenegraph 场景图](https://threejs.org/manual/#zh/scenegraph): 6.29 ✅
 - [x] [Materials 材质](https://threejs.org/manual/#zh%252Fmaterials): 6.29 ✅
-- [x] [Texture 纹理](https://threejs.org/manual/#zh%252Ftextures)
+- [x] [Texture 纹理](https://threejs.org/manual/#zh%252Ftextures): 6.30 ✅
+- [x] [Lights 光照](https://threejs.org/manual/#zh/lights): 7.3 ✅

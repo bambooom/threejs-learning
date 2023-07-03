@@ -11,6 +11,7 @@ export default defineConfig({
         scenegraph: resolve(__dirname, 'examples/03-scenegraph.html'),
         tank: resolve(__dirname, 'examples/tank.html'),
         texture: resolve(__dirname, 'examples/04-texture.html'),
+        lights: resolve(__dirname, 'examples/lights.html'),
       },
     },
   },
