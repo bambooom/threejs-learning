@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>three.js tutorial - primitives</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+
+      #c {
+        width: 100%;
+        height: 100%;
+        display: block;
+        /* canvas的display默认为 inline */
+      }
+      .split {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+      .split>div {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="c"></canvas>
+    <!-- 分成两个场景，有一个单独用来观察这个实际工作的摄像机，然后画出摄像机的视锥 -->
+    <div class="split">
+      <div id="view1" tabindex="1"></div>
+      <div id="view2" tabindex="2"></div>
+    </div>
+    <script type="module" src="../js/cameras.js"></script>
+  </body>
+
+</html>

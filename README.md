@@ -14,6 +14,9 @@
 > LinearFilter 是指从纹理中选择离我们应该选择颜色的地方最近的4个像素，并根据实际点与4个像素的距离，以适当的比例进行混合。
 > 在绘制的纹理小于其原始尺寸时设置过滤器，你可以将 texture.minFilter 属性设置为6个值
 
+> `PerspectiveCamera` 定义了一个 视锥（frustum）。frustum 是一个切掉顶的三角锥或者说实心金字塔型。 说到实心体solid，在这里通常是指一个立方体、一个圆锥、一个球、一个圆柱或锥台。
+> near定义了视锥的前端，far定义了后端，fov是视野，通过计算正确的高度来从摄像机的位置获得指定的以near为单位的视野，定义的是视锥的前端和后端的高度。aspect间接地定义了视锥前端和后端的宽度，实际上视锥的宽度是通过高度乘以 aspect 来得到的。
+
 ## Logs
 
 - [x] [Fundamentals](https://threejs.org/manual/#zh%252Ffundamentals): 6.26 ✅
@@ -23,3 +26,4 @@
 - [x] [Materials 材质](https://threejs.org/manual/#zh%252Fmaterials): 6.29 ✅
 - [x] [Texture 纹理](https://threejs.org/manual/#zh%252Ftextures): 6.30 ✅
 - [x] [Lights 光照](https://threejs.org/manual/#zh/lights): 7.3 ✅
+- [x] [Cameras 摄像机](https://threejs.org/manual/#zh/cameras): 7.5 ✅

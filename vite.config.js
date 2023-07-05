@@ -12,6 +12,7 @@ export default defineConfig({
         tank: resolve(__dirname, 'examples/tank.html'),
         texture: resolve(__dirname, 'examples/04-texture.html'),
         lights: resolve(__dirname, 'examples/lights.html'),
+        cameras: resolve(__dirname, 'examples/cameras.html'),
       },
     },
   },
