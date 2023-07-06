@@ -14,6 +14,7 @@ export default defineConfig({
         lights: resolve(__dirname, 'examples/lights.html'),
         cameras: resolve(__dirname, 'examples/cameras.html'),
         shadows: resolve(__dirname, 'examples/shadows.html'),
+        shadows2: resolve(__dirname, 'examples/shadows2.html'),
       },
     },
   },

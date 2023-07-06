@@ -18,6 +18,7 @@
 > near定义了视锥的前端，far定义了后端，fov是视野，通过计算正确的高度来从摄像机的位置获得指定的以near为单位的视野，定义的是视锥的前端和后端的高度。aspect间接地定义了视锥前端和后端的宽度，实际上视锥的宽度是通过高度乘以 aspect 来得到的。
 
 > 移动阴影贴图，有三种光可以投射阴影，分别为DirectionalLight 定向光、 PointLight 点光源、SpotLight 聚光灯
+> 在场景中的每个网格，我们都能设置它是否能投射阴影或被投射阴影
 > Three.js 默认使用shadow maps（阴影贴图），阴影贴图的工作方式就是具有投射阴影的光能对所有能被投射阴影的物体从光源渲染阴影。
 > 如果你有 20 个物体对象、5 个灯光，并且所有的物体都能被投射阴影，所有的光都能投射阴影，那么这个场景这个场景将会绘制 6 次。第一个灯光将会为所有的物体投影阴影，绘制场景。然后是第二个灯光绘制场景，然后是第三个灯光，以此类推。最后一次（即第六次）将通过前五个灯光渲染的数据，渲染出最终的实际场景。
 > 如果你有一个能投射阴影的点光源在这个场景中，那个这个场景将会为这个点光源再绘制 6 次。
@@ -33,3 +34,4 @@
 - [x] [Texture 纹理](https://threejs.org/manual/#zh%252Ftextures): 6.30 ✅
 - [x] [Lights 光照](https://threejs.org/manual/#zh/lights): 7.3 ✅
 - [x] [Cameras 摄像机](https://threejs.org/manual/#zh/cameras): 7.5 ✅
+- [x] [Shadows 阴影](https://threejs.org/manual/#zh/shadows): 7.6 ✅
