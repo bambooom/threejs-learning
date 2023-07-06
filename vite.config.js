@@ -13,6 +13,7 @@ export default defineConfig({
         texture: resolve(__dirname, 'examples/texture.html'),
         lights: resolve(__dirname, 'examples/lights.html'),
         cameras: resolve(__dirname, 'examples/cameras.html'),
+        shadows: resolve(__dirname, 'examples/shadows.html'),
       },
     },
   },
