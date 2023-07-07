@@ -30,6 +30,9 @@
 > FogExp2 会根据离摄像机的距离呈指数增长。
 > fog 在材料上有个布尔属性，用来设置渲染物体的材料是否会受到雾的影响。对于大多数材料而言默认设置为 true，也有需要关掉的例子，比如一个外面弥漫浓雾的房子，房子室内才材料应该不受影响
 
+
+> 在three.js中，渲染目标大体上指的是可以被渲染的纹理。当它被渲染之后，你可以像使用其他纹理一样使用它。
+
 ## Logs
 
 - [x] [Fundamentals](https://threejs.org/manual/#zh%252Ffundamentals): 6.26 ✅
@@ -42,3 +45,4 @@
 - [x] [Cameras 摄像机](https://threejs.org/manual/#zh/cameras): 7.5 ✅
 - [x] [Shadows 阴影](https://threejs.org/manual/#zh/shadows): 7.6 ✅
 - [x] [Fog 雾](https://threejs.org/manual/#zh/fog): 7.7 ✅
+- [x] [渲染目标 Rendertargets](https://threejs.org/manual/#zh/rendertargets): 7.7 ✅
