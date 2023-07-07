@@ -24,6 +24,12 @@
 > 如果你有一个能投射阴影的点光源在这个场景中，那个这个场景将会为这个点光源再绘制 6 次。
 > 解决性能问题：1）允许多个光源，但只让一个光源能投射阴影。2）使用光照贴图或者环境光贴图，预先计算离线照明的效果。这将导致静态光照，但是至少该方案渲染的非常快
 
+
+> 在3D引擎里，雾通常是基于离摄像机的距离褪色至某种特定颜色的方式。在three.js中添加雾是通过创建 Fog 或者 FogExp2 实例并设定scene的fog 属性。
+> Fog 让你设定 near 和 far 属性，代表距离摄像机的距离。任何物体比 near 近不会受到影响，任何物体比 far 远则完全是雾的颜色。在 near 和 far 中间的物体，会从它们自身材料的颜色褪色到雾的颜色。
+> FogExp2 会根据离摄像机的距离呈指数增长。
+> fog 在材料上有个布尔属性，用来设置渲染物体的材料是否会受到雾的影响。对于大多数材料而言默认设置为 true，也有需要关掉的例子，比如一个外面弥漫浓雾的房子，房子室内才材料应该不受影响
+
 ## Logs
 
 - [x] [Fundamentals](https://threejs.org/manual/#zh%252Ffundamentals): 6.26 ✅
@@ -35,3 +41,4 @@
 - [x] [Lights 光照](https://threejs.org/manual/#zh/lights): 7.3 ✅
 - [x] [Cameras 摄像机](https://threejs.org/manual/#zh/cameras): 7.5 ✅
 - [x] [Shadows 阴影](https://threejs.org/manual/#zh/shadows): 7.6 ✅
+- [x] [Fog 雾](https://threejs.org/manual/#zh/fog): 7.7 ✅

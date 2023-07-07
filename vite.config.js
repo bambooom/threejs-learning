@@ -15,6 +15,7 @@ export default defineConfig({
         cameras: resolve(__dirname, 'examples/cameras.html'),
         shadows: resolve(__dirname, 'examples/shadows.html'),
         shadows2: resolve(__dirname, 'examples/shadows2.html'),
+        fog: resolve(__dirname, 'examples/fog.html'),
       },
     },
   },
