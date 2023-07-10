@@ -33,6 +33,9 @@
 
 > 在three.js中，渲染目标大体上指的是可以被渲染的纹理。当它被渲染之后，你可以像使用其他纹理一样使用它。
 
+
+> 在three.js中， BufferGeometry 是用来代表所有几何体的一种方式。 BufferGeometry 本质上是一系列 BufferAttributes 的 名称 。每一个 BufferAttribute 代表一种类型数据的数组：位置，法线，颜色，uv，等等…… 这些合起来， BufferAttributes 代表每个顶点所有数据的 并行数组 。
+
 ## Logs
 
 - [x] [Fundamentals](https://threejs.org/manual/#zh%252Ffundamentals): 6.26 ✅
@@ -46,3 +49,4 @@
 - [x] [Shadows 阴影](https://threejs.org/manual/#zh/shadows): 7.6 ✅
 - [x] [Fog 雾](https://threejs.org/manual/#zh/fog): 7.7 ✅
 - [x] [渲染目标 Rendertargets](https://threejs.org/manual/#zh/rendertargets): 7.7 ✅
+- [x] [自定义缓冲几何体 Custom Buffergeometry](https://threejs.org/manual/#zh/custom-buffergeometry): 7.10 ✅

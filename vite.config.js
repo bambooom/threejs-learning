@@ -17,6 +17,7 @@ export default defineConfig({
         shadows2: resolve(__dirname, 'examples/shadows2.html'),
         fog: resolve(__dirname, 'examples/fog.html'),
         rendertargets: resolve(__dirname, 'examples/rendertargets.html'),
+        custombuffergeometry: resolve(__dirname, 'examples/custom-buffergeometry.html'),
       },
     },
   },
