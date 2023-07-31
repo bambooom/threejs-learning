@@ -48,5 +48,6 @@
 - [x] [Cameras 摄像机](https://threejs.org/manual/#zh/cameras): 7.5 ✅
 - [x] [Shadows 阴影](https://threejs.org/manual/#zh/shadows): 7.6 ✅
 - [x] [Fog 雾](https://threejs.org/manual/#zh/fog): 7.7 ✅
-- [x] [渲染目标 Rendertargets](https://threejs.org/manual/#zh/rendertargets): 7.7 ✅
-- [x] [自定义缓冲几何体 Custom Buffergeometry](https://threejs.org/manual/#zh/custom-buffergeometry): 7.10 ✅
+- [x] [Rendertargets 渲染目标](https://threejs.org/manual/#zh/rendertargets): 7.7 ✅
+- [x] [Custom Buffergeometry 自定义缓冲几何体](https://threejs.org/manual/#zh/custom-buffergeometry): 7.10 ✅
+- [x] [Snowglobe example](https://enlight.nyc/projects/snowglobe-threejs): 7:31 ✅

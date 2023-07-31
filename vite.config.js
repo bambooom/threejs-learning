@@ -18,6 +18,7 @@ export default defineConfig({
         fog: resolve(__dirname, 'examples/fog.html'),
         rendertargets: resolve(__dirname, 'examples/rendertargets.html'),
         custombuffergeometry: resolve(__dirname, 'examples/custom-buffergeometry.html'),
+        snowglobe: resolve(__dirname, 'examples/snowglobe.html'),
       },
     },
   },
